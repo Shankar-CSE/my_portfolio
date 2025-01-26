@@ -1,0 +1,62 @@
+/* Animation for moving elements from top to bottom */
+@keyframes uptodown {
+    0% {
+        transform: translateY(-100%); /* Start off-screen at the top */
+    }
+    100% {
+        transform: translateY(0); /* Move to its normal position */
+    }
+}
+
+/* Zoom-in effect */
+@keyframes zoomin {
+    from {
+        transform: scale(0.5); /* Start at half size */
+    }
+    to {
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadein {
+    from {
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        opacity: 1; /* End visible */
+    }
+}
+
+/* Move up effect */
+@keyframes moveup {
+    from {
+        transform: translateY(300px); /* Start below the normal position */
+    }
+    to {
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Blinking effect with changing box-shadow */
+@keyframes blinker {
+    0% {
+        box-shadow: 2px -2px 20px white; /* Start with a glowing shadow */
+    }
+    50% {
+        box-shadow: 0px 0px 0px white; /* Shadow disappears */
+    }
+    100% {
+        box-shadow: 2px -2px 20px white; /* Shadow reappears */
+    }
+}
+
+/* Animation for elements moving from right to left */
+@keyframes righttoleft {
+    from {
+        transform: translateX(20px); /* Start slightly to the right */
+    }
+    to {
+        transform: translateX(0) rotate(-10deg); /* End at normal position with slight rotation */
+    }
+}
