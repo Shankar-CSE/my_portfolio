@@ -1,11 +1,11 @@
 function resume() {
-    window.open('resume.html', '_blank');
+    window.open('resume.html', '_self');
 }
 
 function openResume(){
-    window.open('files/Resume%204.pdf','_blank');
+    window.open('files/RESUME.pdf','_blank');
 }
 
 function certificates(){
-    window.open('certificate.html', '_blank');
+    window.open('certificate.html', '_self');
 }

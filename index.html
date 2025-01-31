@@ -1,83 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Shankar.l</title>
-   <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animation.css">
+    
+    <!-- Favicon for the website -->
+    <link rel="icon" href="images/my logo.jpg" type="image/x-icon">
+    
+    <!-- External CSS for general styling and animations -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="animation.css" type="text/css">
 </head>
+
 <body>
-    <center>  
-        <!-- Header Section -->
-        <div class="titlebar" id="home">
-            <img onclick="location.reload()" src="images/my logo.jpg" alt="logo" class="logo">
-            <div class="name1">SHANKAR L</div>
-            <nav class="nav"> <!-- Navigation Menu -->
-                <a href="#home">Home</a>
-                <a href="#social">Contact</a>
-                <a href="#about">About</a>
-            </nav>
-        </div>
-        
-        <!-- Profile Image Section -->
+    <!-- Main Content of the Page -->
+    
+    <!-- Header Section: Contains logo, name, and navigation menu -->
+    <div class="titlebar" id="home">
+        <img onclick="location.reload()" src="images/my logo.jpg" alt="logo" class="logo">
+        <div class="name">SHANKAR L</div>
+        <nav class="nav">
+            <!-- Navigation links for Home, Contact, and About sections -->
+            <a href="#home">Home</a>
+            <a href="#social">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </div>
+
+    <!-- Profile Image Section -->
+    <img class="profile" src="images/profilepic.jpg" alt="Profile Picture">
+
+    <!-- Introduction Section with name and resume button -->
+    <h1 class="name1">SHANKAR</h1>
+    <div class="resume" onclick="resume()">MY RESUME</div>
+
+    <hr>
+
+    <!-- "Who Am I?" Section: Describes daily roles -->
+    <section class="who">
+        <img class="backpose" src="images/back pose.jpg" width="500px" alt="Back pose">
         <div>
-            <img class="profile" src="images/profilepic.jpg" alt="Profile Picture">
+            <h1 style="font-size: 30px;">WHO AM I ? </h1>
+            <p>
+                By day <img class="icon" src="images/day.png" alt="(sun)"> 
+                <b class="bio">I'm a Dynamic Developer</b><br><br>
+                By Night <img class="icon" src="images/night.png" alt="(moon)"> 
+                <b class="bio">I'm an Epic Video Editor</b>
+            </p>
         </div>
+    </section>
 
-        <!-- Introduction Section -->
-        <div class="subtitle">
-            <h1 class="name">SHANKAR</h1>
-            <div class="resume" onclick="resume()">My Resume</div>
-        </div>
-        
-        <hr>
-        
-        <!-- "Who Am I?" Section -->
-        <section class="who">
-            <img class="backpose" src="images/back pose.jpg" width="500px" alt="Image">
-            <div>
-                <h1 style="font-size: 30px;">WHO AM I ? </h1>
-                <p>  
-                    By day <img class="icon" src="images/day.png" alt="(sun)">
-                    <b style="font-size: 25px;"> I'm a Dynamic Developer</b><br><br>
-                    By Night <img class="icon" src="images/night.png" alt="(moon)">
-                    <b style="font-size: 25px;">I'm an Epic Video Editor</b>
-                </p>
-            </div>
-        </section>
-        
-        <hr>
+    <hr>
 
-        <!-- Contact Section -->
-        <h1>CONTACT</h1>
-        <div class="social" id="social">
-            <!-- Social Media Links -->
-            <a target="_blank" href="https://wa.me/qr/XDGQYJO5L44AD1"><img class="image" width="60px" src="https://th.bing.com/th/id/OIP.p4DtgOMIhajNYTwXd9-d2gHaHa?w=200&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="whatsapp"></a>
-            <a href="mailto:shankarl5252@gmail.com"><img class="image" width="60px" src="https://th.bing.com/th?q=Black+and+White+Mail+Stamp+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Mail"></a>
-            <a href="https://www.instagram.com/nukes_shankar/" target="_blank"><img width="80px" src="https://th.bing.com/th?id=OIP.VDkf14-_VAgjryLveN3ImQHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61565111763162" target="_blank"><img width="60px" src="https://th.bing.com/th?id=OIP.Ov3ayDymo6745Qfb7kctEQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/in/shankar-l-ba3075328/" target="_blank"><img width="60px" src="https://th.bing.com/th/id/OIP.G6_DpGvYZd_30sfPodH9MgHaHw?rs=1&pid=ImgDetMain" alt="Linkedin"></a>
-            <a href="https://github.com/Shankar-CSE" target="_blank"><img width="50px" src="https://th.bing.com/th/id/OIP.2ZHi-aVKHCM_cXaaTpMJzAHaHl?w=160&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="github"></a>
-            <a href="https://x.com/ShankarL5252" target="_blank"><img width="60px" src="https://th.bing.com/th/id/OIP.pdC0JKBCfHrXwOn575A9RAHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="X.com"></a>
-        </div>
+    <!-- Contact Section: Social Media Links -->
+    <h2>TOUCH WITH ME</h2>
+    <div class="social" id="social">
+        <!-- Social Media Links with icons for contact -->
+        <a target="_blank" href="https://wa.me/qr/XDGQYJO5L44AD1">
+            <img class="image" width="60px" src="https://th.bing.com/th/id/OIP.p4DtgOMIhajNYTwXd9-d2gHaHa?w=200&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="WhatsApp">
+        </a>
+        <a href="mailto:shankarl5252@gmail.com">
+            <img class="image" width="60px" src="https://th.bing.com/th?q=Black+and+White+Mail+Stamp+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Email">
+        </a>
+        <a href="https://www.instagram.com/nukes_shankar/" target="_blank">
+            <img width="80px" src="https://th.bing.com/th?id=OIP.VDkf14-_VAgjryLveN3ImQHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61565111763162" target="_blank">
+            <img width="60px" src="https://th.bing.com/th?id=OIP.Ov3ayDymo6745Qfb7kctEQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/shankar-l-ba3075328/" target="_blank">
+            <img width="60px" src="https://th.bing.com/th/id/OIP.G6_DpGvYZd_30sfPodH9MgHaHw?rs=1&pid=ImgDetMain" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Shankar-CSE" target="_blank">
+            <img width="50px" src="https://th.bing.com/th/id/OIP.2ZHi-aVKHCM_cXaaTpMJzAHaHl?w=160&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="GitHub">
+        </a>
+        <a href="https://x.com/ShankarL5252" target="_blank">
+            <img width="60px" src="https://th.bing.com/th/id/OIP.pdC0JKBCfHrXwOn575A9RAHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="X.com">
+        </a>
+    </div>
 
-        <hr>
+    <hr>
 
-        <!-- About Section -->
-        <div>
-            <h1>ABOUT</h1>
-            <h1 class="about" id="about">Currently, I am a First year Computer Science and Engineering student in Sri Eshwar College of Engineering.</h1>
-        </div>
-        
-        <hr>
+    <!-- About Section: Brief introduction -->
+    <div>
+        <h2>ABOUT</h2>
+        <h3 class="about" id="about">Currently, I am a First year Computer Science and Engineering student at Sri Eshwar College of Engineering.</h3>
+    </div>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <p style="color: aliceblue;">&copy 2025 Shankar.L</p>
-        </div>
+    <hr>
 
-    </center>
+    <!-- Footer Section: Copyright information -->
+    <div class="footer">
+        <p>&copy 2025 Shankar.L</p>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
