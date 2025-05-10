@@ -1,105 +1,770 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Shankar.l</title>
-    
-    <!-- Favicon for the website -->
-    <link rel="icon" href="images/my logo.jpg" type="image/x-icon">
-    
-    <!-- External CSS for general styling and animations -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="stylesheet" href="animation.css" type="text/css">
+    <title>Shankar L | CSE Student & Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            100: '#E5E7EB',
+                            200: '#D1D5DB',
+                            300: '#9CA3AF',
+                            400: '#6B7280',
+                            500: '#4B5563',
+                            600: '#374151',
+                            700: '#1F2937',
+                            800: '#111827',
+                            900: '#0F172A',
+                        },
+                    },
+                },
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body class="theme-transition bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="images/my logo.jpg" alt="Logo" class="h-8 w-8 rounded-full">
+                    <span class="font-bold text-lg dark:text-white">Shankar</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-indigo-600 dark:text-indigo-400 font-medium">Home</a>
+                    <a href="#certificates" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Certificates</a>
+                    <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Skills</a>
+                    <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">About</a>
+                    <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg focus:outline-none">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300" id="theme-icon"></i>
+                    </button>
+                </div>
+                <div class="flex md:hidden items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg focus:outline-none">
+                        <i class="fas fa-moon text-gray-600 dark:text-yellow-300" id="theme-icon-mobile"></i>
+                    </button>
+                    <button class="text-gray-600 dark:text-gray-300" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<body>
-    <center>
-    <!-- Main Content of the Page -->
-    
-    <!-- Header Section: Contains logo, name, and navigation menu -->
-    <div class="titlebar" id="home">
-        <img onclick="location.reload()" src="images/my logo.jpg" alt="logo" class="logo">
-        <div class="name">SHANKAR L</div>
-        <nav class="nav">
-            <!-- Navigation links for Home, Contact, and About sections -->
-            <a href="#home">Home</a>
-            <a href="#social">Contact</a>
-            <a href="#about">About</a>
-        </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white dark:bg-gray-800 z-40 pt-20 px-4">
+        <div class="flex flex-col space-y-6 py-8">
+            <a href="#home" class="text-2xl font-medium text-gray-800 dark:text-gray-100">Home</a>
+            <a href="#certificates" class="text-2xl font-medium text-gray-800 dark:text-gray-100">Certificates</a>
+            <a href="#skills" class="text-2xl font-medium text-gray-800 dark:text-gray-100">Skills</a>
+            <a href="#about" class="text-2xl font-medium text-gray-800 dark:text-gray-100">About</a>
+            <a href="#contact" class="text-2xl font-medium text-gray-800 dark:text-gray-100">Contact</a>
+        </div>
     </div>
 
-    <!-- Profile Image Section -->
-    <img class="profile" src="images/profilepic.jpg" alt="Profile Picture">
-
-    <!-- Introduction Section with name and resume button -->
-    <h1 class="name1">SHANKAR</h1>
-    <div class="resume" onclick="resume()">MY RESUME</div>
-
-    <hr>
-
-    <!-- "Who Am I?" Section: Describes daily roles -->
-    <section class="who">
-        <img class="backpose" src="images/back pose.jpg" width="500px" alt="Back pose">
-        <div>
-            <h1 style="font-size: 30px;">WHO AM I ? </h1>
-            <p>
-                By day <img class="icon" src="images/day.png" alt="(sun)"> 
-                <b class="bio">I'm a Dynamic Developer</b><br><br>
-                By Night <img class="icon" src="images/night.png" alt="(moon)"> 
-                <b class="bio">I'm an Epic Video Editor</b>
-            </p>
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-[fadeIn_1s_ease-in-out]">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Hi, I'm <span class="gradient-text">Shankar</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 dark:text-gray-300 mb-6">
+                    Computer Science Student & Developer
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                    First year CSE student at Sri Eshwar College of Engineering passionate about web development and programming.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-800/50">
+                        Contact Me
+                    </a>
+                    <a href="#certificates" class="border-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-gray-800 px-6 py-3 rounded-lg font-medium transition">
+                        View Certificates
+                    </a>
+                </div>
+            </div>
+            <div class="relative hidden md:block">
+                <div class="absolute -top-8 -left-8 w-64 h-64 bg-indigo-100 dark:bg-indigo-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-purple-100 dark:bg-purple-900 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div class="relative animate-float">
+                    <img src="images/profile.jpg" alt="Profile" class="w-80 h-80 object-cover rounded-2xl shadow-xl border-4 border-white dark:border-gray-800">
+                </div>
+            </div>
         </div>
     </section>
 
-    <hr>
 
-    <!-- Contact Section: Social Media Links -->
-    <h2>TOUCH WITH ME</h2>
-    <div class="social" id="social">
-        <!-- Social Media Links with icons for contact -->
-        <a target="_blank" href="https://wa.me/qr/XDGQYJO5L44AD1">
-            <img class="image" width="60px" src="https://th.bing.com/th/id/OIP.p4DtgOMIhajNYTwXd9-d2gHaHa?w=200&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="WhatsApp">
-        </a>
-        <a href="mailto:shankarl5252@gmail.com">
-            <img class="image" width="60px" src="https://th.bing.com/th?q=Black+and+White+Mail+Stamp+Logo&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Email">
-        </a>
-        <a href="https://www.instagram.com/nukes_shankar/" target="_blank">
-            <img width="80px" src="https://th.bing.com/th?id=OIP.VDkf14-_VAgjryLveN3ImQHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61565111763162" target="_blank">
-            <img width="60px" src="https://th.bing.com/th?id=OIP.Ov3ayDymo6745Qfb7kctEQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="Facebook">
-        </a>
-        <a href="https://www.linkedin.com/in/shankar-l-ba3075328/" target="_blank">
-            <img width="60px" src="https://th.bing.com/th/id/OIP.G6_DpGvYZd_30sfPodH9MgHaHw?rs=1&pid=ImgDetMain" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/Shankar-CSE" target="_blank">
-            <img width="50px" src="https://th.bing.com/th/id/OIP.2ZHi-aVKHCM_cXaaTpMJzAHaHl?w=160&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="GitHub">
-        </a>
-        <a href="https://x.com/ShankarL5252" target="_blank">
-            <img width="60px" src="https://th.bing.com/th/id/OIP.pdC0JKBCfHrXwOn575A9RAHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="X.com">
-        </a>
+
+
+<!-- certificates Section  -->
+   <section id="certificates" class="py-20 bg-gray-100 dark:bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Certifications</span></h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Certificates I've earned through dedicated learning and practice.
+            </p>
+        </div>
+
+        <div class="overflow-hidden rounded">
+            <div class="flex animate-scroll gap-8 " style="width: calc(300px * 6 * 2);">
+                <!-- Certificate 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/html.png" alt="HTML" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Sololearn
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">HTML</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Successfully completed HTML course in Sololearn</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Oct 2024</span>
+                            <span>CC-QB692M8N</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/css.jpg" alt="CSS Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">CSS</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Created an animated landing page using frontend technologies</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Oct 2024</span>
+                            <span>1.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/C Program2.png" alt="C Programming" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            IIT Bombay
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">C Programming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Completed training with course material from Spoken Tutorial Project</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Dec 2024</span>
+                            <span>Score: 72.50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/python.jpg" alt="Python Programming Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Python</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Mastered Python fundamentals </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Mar 2025</span>
+                            <span>5.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/javascript.jpg" alt="JavaScript Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">JavaScript</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Built interactive web applications using advanced JavaScript</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Feb 2025</span>
+                            <span>2.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 6 -->
+                 <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/c++ Program.png" alt="C++ Programming" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            IIT Bombay
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">C++ Programming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Completed training with course material from Spoken Tutorial Project</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Dec 2024</span>
+                            <span>Score: 72.50%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Certificate 1 -->
+
+
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/html.png" alt="HTML" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Sololearn
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">HTML</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Successfully completed HTML course in Sololearn</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Oct 2024</span>
+                            <span>CC-QB692M8N</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/css.jpg" alt="CSS Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">CSS</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Created an animated landing page using frontend technologies</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Oct 2024</span>
+                            <span>1.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/C Program2.png" alt="C Programming" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            IIT Bombay
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">C Programming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Completed training with course material from Spoken Tutorial Project</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Dec 2024</span>
+                            <span>Score: 72.50%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/python.jpg" alt="Python Programming Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Python</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Mastered Python fundamentals </p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Mar 2025</span>
+                            <span>5.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 5 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/javascript.jpg" alt="JavaScript Certificate" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            Udemy
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">JavaScript</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Built interactive web applications using advanced JavaScript</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Feb 2025</span>
+                            <span>2.5 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 6 -->
+                 <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-105 hover:shadow-xl dark:hover:shadow-gray-700/50 flex-none w-[300px]">
+                    <div class="relative h-48">
+                        <img src="Certificates/c++ Program.png" alt="C++ Programming" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 right-4 bg-white dark:bg-gray-800 text-amber-600 dark:text-amber-400 px-3 py-1 rounded-full text-sm font-semibold">
+                            IIT Bombay
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">C++ Programming</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Completed training with course material from Spoken Tutorial Project</p>
+                        <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+                            <span>Dec 2024</span>
+                            <span>Score: 72.50%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     </div>
+</section>
 
-    <hr>
 
-    <!-- About Section: Brief introduction -->
-    <div>
-        <h2>ABOUT</h2>
-        <h3 class="about" id="about">Currently, I am a First year Computer Science and Engineering student at Sri Eshwar College of Engineering.</h3>
+
+<section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Skills</span></h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Technologies I've worked with and currently learning.
+            </p>
+        </div>
+
+        <div class="overflow-hidden">
+            <div class="flex animate-scroll gap-6" style="width: calc(200px * 6 * 2);">
+                <!-- Skill 1: HTML5 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-html5 text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">HTML5</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2: CSS3 -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-css3-alt text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">CSS3</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3: JavaScript -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-js text-yellow-600 dark:text-yellow-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">JavaScript</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 4: C Programming -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">C Programming</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 5: C++ -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-purple-600 dark:text-purple-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">C++</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 6: Python -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-python text-green-600 dark:text-green-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">Python</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <!-- Duplicates for seamless looping -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-html5 text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">HTML5</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-css3-alt text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">CSS3</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-js text-yellow-600 dark:text-yellow-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">JavaScript</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">C Programming</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-blue-600 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-purple-600 dark:text-purple-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">C++</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md flex flex-col items-center flex-none w-[200px]">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-4">
+                        <i class="fab fa-python text-green-600 dark:text-green-400 text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold dark:text-white">Python</h3>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <hr>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">About <span class="gradient-text">Me</span></h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                        I'm a passionate first-year Computer Science and Engineering student at Sri Eshwar College of Engineering with a strong interest in web development and programming.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        I enjoy turning complex problems into simple, beautiful and intuitive solutions. When I'm not coding, you'll find me solving problems on LeetCode or learning new technologies.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button onclick="window.open('files/RESUME.pdf')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-800/50">
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 dark:text-white">LeetCode</h3>
+                        <p class="text-gray-600 dark:text-gray-300">25+ problems solved</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 dark:text-white">CodeChef</h3>
+                        <p class="text-gray-600 dark:text-gray-300">20+ problems solved</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 dark:text-white">Education</h3>
+                        <p class="text-gray-600 dark:text-gray-300">B.E CSE (2024-2025)</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 dark:text-white">Certificates</h3>
+                        <p class="text-gray-600 dark:text-gray-300">5+ completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer Section: Copyright information -->
-    <div class="footer">
-        <p>&copy 2025 Shankar.L</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Feel free to reach out for collaborations or just a friendly hello.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition dark:bg-gray-700 dark:text-white" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition dark:bg-gray-700 dark:text-white" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition dark:bg-gray-700 dark:text-white" required></textarea>
+                    </div>
+                    <button type="button" id="send-button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg hover:shadow-indigo-200 dark:hover:shadow-indigo-800/50">
+                        Send Message
+                    </button>
+                </form>
+                <p id="form-message" class="text-center mt-4 text-gray-600 dark:text-gray-300 hidden"></p>
+            </div>
+            <div class="flex flex-col justify-center">
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full text-indigo-600 dark:text-indigo-400">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg dark:text-white">Email</h3>
+                            <a href="mailto:shankarl5252@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">shankarl5252@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full text-indigo-600 dark:text-indigo-400">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg dark:text-white">Phone</h3>
+                            <a href="tel:+916382322466" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition">+91 6382322466</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="font-semibold text-lg mb-4 dark:text-white">Connect with me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Shankar-CSE" target="_blank" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full text-gray-700 dark:text-gray-300 transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shankar-l-ba3075328/" target="_blank" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full text-gray-700 dark:text-gray-300 transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                      
+
+<a href="https://x.com/ShankarL5252" target="_blank" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full text-gray-700 dark:text-gray-300 transition" aria-label="Follow on X">
+    <span class="x-logo">𝕏</span>
+</a>
+                        <a href="https://www.instagram.com/nukes_shankar/" target="_blank" class="bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 p-3 rounded-full text-gray-700 dark:text-gray-300 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
 
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
-</center>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+(function() {
+    emailjs.init("O6KTtDAS4PLvvl2sF"); // Replace with your EmailJS public key
+})();
+
+document.getElementById('send-button').addEventListener('click', function() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const formMessage = document.getElementById('form-message');
+
+    // Validate inputs
+    if (!name || !email || !message) {
+        formMessage.textContent = 'Please fill in all fields.';
+        formMessage.classList.remove('hidden', 'text-green-600', 'dark:text-green-400');
+        formMessage.classList.add('text-red-600', 'dark:text-red-400');
+        return;
+    }
+
+    // EmailJS send email
+    emailjs.send("service_wkl0fb9", "template_dfe8ypr", {
+        name: name,
+        message: message,
+        email: email
+    })
+    .then(function(response) {
+        formMessage.textContent = 'Message sent successfully!';
+        formMessage.classList.remove('hidden', 'text-red-600', 'dark:text-red-400');
+        formMessage.classList.add('text-green-600', 'dark:text-green-400');
+        document.getElementById('contact-form').reset();
+    }, function(error) {
+        formMessage.textContent = 'Failed to send message. Please try again.';
+        formMessage.classList.remove('hidden', 'text-green-600', 'dark:text-green-400');
+        formMessage.classList.add('text-red-600', 'dark:text-red-400');
+    });
+});
+</script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <img src="images/my logo.jpg" alt="Logo" class="h-8 w-8 rounded-full">
+                    <span class="font-bold text-lg">Shankar L</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+                    <a href="#certificates" class="hover:text-indigo-400 transition">Certificates</a>
+                    <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                    <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                    <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 dark:border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Shankar L. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition opacity-0 invisible" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+        const html = document.documentElement;
+
+        // Function to set theme
+        function setTheme(isDark) {
+            if (isDark) {
+                html.classList.add('dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                themeIconMobile.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                themeIconMobile.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Check for saved theme preference or use system preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setTheme(true);
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            setTheme(!html.classList.contains('dark'));
+        });
+
+        themeToggleMobile.addEventListener('click', () => {
+            setTheme(!html.classList.contains('dark'));
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Back to top button visibility
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches);
+            }
+        });
+    </script>
 </body>
-
 </html>
